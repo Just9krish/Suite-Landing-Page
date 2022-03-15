@@ -1,0 +1,417 @@
+/* Root */
+
+/* Colors */
+
+:root {
+  --dark-blue: hsla(219, 42%, 16%, 1);
+  --grey: hsla(219, 20%, 36%, 1);
+  --cream: hsla(30, 35%, 93%, 1);
+  --cream-white: hsla(30, 29%, 97%, 1);
+  --cream-white-lighter: hsla(26, 26%, 97%, 1);
+  --lavender-indigo: hsla(264, 100%, 69%, 1);
+  --steel-pink: hsla(292, 76%, 54%, 1);
+  --pastel-orange: hsla(31, 100%, 65%, 1);
+  --primary: var(--dark-blue);
+  --secondary: var(--cream-white);
+  --secondary-dark: var(--cream);
+  --text: var(--grey);
+  --text-light: var(--cream);
+  --heading: var(--dark-blue);
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--lavender-indigo) 0%,
+    var(--steel-pink) 49.21%,
+    var(--pastel-orange) 100%
+  );
+  --gradient-body-bg: linear-gradient(
+    to bottom,
+    var(--clr-cream-white-lighter) 82%,
+    var(--clr-cream) 82%
+  );
+}
+
+/* Reseting Defaul */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* reset default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+svg {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Remove inbuilt form typo */
+
+input,
+button,
+textarea,
+select {
+  font-size: inherit;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles and padding on ul, ol elements  */
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Common Styling */
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--gradient-body-bg);
+}
+
+.a-img-wrapper {
+  line-height: 0;
+}
+
+/* -------- Components --------- */
+/* Logo */
+
+.logo {
+  width: 5rem;
+  height: 2rem;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 0.3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.7;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.btn,
+.btn:visited,
+.btn:hover,
+.btn:active {
+  color: var(--secondary);
+}
+
+.btn:hover {
+  background: var(--gradient-accent);
+  transition: all 0.3s;
+}
+
+.home-btn {
+  padding: 0.75em 1em;
+  border: 1px solid var(--primary);
+  font-size: 0.8rem;
+  background: none;
+  color: var(--primary) !important;
+}
+
+.home-btn:hover {
+  background: var(--primary);
+  color: var(--secondary) !important;
+  transition: all 0.3s;
+}
+
+/* ------------- Layouts ------------- */
+
+/* common */
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 70rem;
+}
+
+/* Header */
+
+.suite-header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 3.5rem;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.8rem;
+  row-gap: 3.4rem;
+  align-items: center;
+}
+
+.hero-main-content,
+.hero-img,
+.hero-stats {
+  grid-column: 1/-1;
+}
+
+.hero-heading {
+  color: var(--heading);
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.82em;
+}
+
+.hero-heading span {
+  font-weight: 700;
+}
+
+.hero-heading br {
+  display: none;
+}
+
+.hero-heading-word {
+  display: inline-block;
+  position: relative;
+  margin-top: 1.05em;
+}
+
+.hero-heading-word img {
+  display: block;
+  position: absolute;
+  top: calc(1.05em * -1);
+  width: 100%;
+  height: auto;
+}
+
+.hero-paragraph {
+  margin-bottom: 2em;
+}
+
+.hero-img {
+  text-align: center;
+}
+
+.hero-img img {
+  width: min(100%, 28rem);
+  height: auto;
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.hero-stat {
+  margin-top: 0.6em;
+}
+
+.hero-stat-text {
+  font-weight: 700;
+  line-height: 1.16;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.hero-stat-heading {
+  color: var(--grey);
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+  letter-spacing: 2.5px;
+}
+
+/* Testimonial */
+
+.testimonial {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  text-align: center;
+  padding-top: 3.5rem;
+}
+
+.testimonial-container {
+  position: relative;
+    overflow-x: hidden;
+}
+
+.testimonial-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  padding-bottom: 4rem;
+}
+
+.testimonial-background {
+  position: absolute;
+  width: 100%;
+  height: 82%;
+  left: 0;
+  bottom: 0;
+  border-radius: 0.9375rem;
+  background-color: var(--dark-blue);
+  z-index: -1;
+}
+
+.testimonial-photo-container {
+  position: relative;
+  width: min(100%, 33.625rem);
+  height: 24.6875rem;
+  overflow-y: clip;
+}
+
+.testimonial-photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.testimonial-photo-background {
+  max-width: unset;
+  width: 33.625rem;
+  height: 33.625rem;
+  position: absolute;
+  bottom: -6.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.testimonial-curved-line {
+  width: 50px;
+  height: 40px;
+  margin: 2.5rem 0;
+}
+
+.testimonial-heading {
+  margin-bottom: 1em;
+  color: var(--cream-white-lighter);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.testimonial-quote {
+  margin-bottom: 2.2em;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.testimonial-user {
+  margin-top:1em;
+}
+.testimonial-user-name {
+  text-transform: uppercase;
+  color: var(--cream-white);
+  font-weight: 700;
+}
+
+.testimonial-user-title {
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+}
+
+
+/* -------- Footer -------- */
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
+  padding-top: 3.5rem;
+}
+
+.footer-container > * {
+  margin-top: 2rem;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-link {
+  line-height: 0;
+}
+
+.footer-social-link:hover {
+  opacity: 0.5;
+}
+
+.footer-social-icon {
+  width: 1.25rem;
+    height: 1.25rem;
+}
+
+.footer-social-link+.footer-social-link {
+  margin-left: 1.75rem;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+}
