@@ -122,6 +122,15 @@ body {
   height: 2rem;
 }
 
+.logo:hover,
+.logo:focus {
+  transform: translateY(-3px);
+}
+
+.logo:active {
+  transform: translateY(0);
+}
+
 /* buttons */
 
 .btn {
