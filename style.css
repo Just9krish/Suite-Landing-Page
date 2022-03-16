@@ -275,7 +275,7 @@ body {
 
 .testimonial {
   color: var(--text-light);
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   text-align: center;
   padding-top: 3.5rem;
 }
@@ -347,6 +347,7 @@ body {
 .testimonial-heading {
   margin-bottom: 1em;
   color: var(--cream-white-lighter);
+  font-size: 2.3rem;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -465,7 +466,7 @@ body {
   /* Tablet testimonial  */
 
   .testimonial-background {
-    width: 100%;
+    width: calc(100% - (1rem * 2));
     height: 80%;
     left: 1rem;
   }
