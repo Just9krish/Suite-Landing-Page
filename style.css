@@ -497,7 +497,7 @@ body {
 /* -------- Layout for desktop -------- */
 
 @media screen and (min-width: 1110px) {
-  /* Header */
+  /*Desktop Header */
 
   .suite-header-container {
     padding-top: 3.12rem;
@@ -541,7 +541,7 @@ body {
     max-width: 35ch;
   }
 
-  /* Testimonial  */
+  /* Desltop Testimonial  */
 
   .testimonial {
     padding-top: 9rem;
@@ -587,10 +587,12 @@ body {
     font-size: 1.25rem;
   }
 
-  /* Footer */ 
+  /* Desktop Footer */ 
 
   .footer-container {
     padding-top: 6rem;
     padding-bottom: 4.5rem;
   }
 }
+
+/* ---------- Completed --------- */
